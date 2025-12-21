@@ -1,11 +1,6 @@
 # 📈 MyAbpApp.Benchmark
 MyAbpApp.Benchmark is a small .NET benchmarking project that measures the performance of core layers in an ABP-based application using [BenchmarkDotNet](https://benchmarkdotnet.org/).
 
-# 🔨 Tools
-- .NET
-- ABP
-- BenchmarkDotNet
-
 # 💡How to run your benchmarks?
 Step 1: Create a benchmark file with a class (e.g., DemoRepositoryBenchmark.cs) and tag the methods you want to measure with [Benchmark] and use [GlobalSetup] / [GlobalCleanup] for setup/teardown (refer to [BenchmarkDotNet Articles](https://benchmarkdotnet.org/articles/overview.html) for more information regarding attributes).  
   
@@ -31,3 +26,8 @@ This command will:
 - [.NET Generic Host](https://learn.microsoft.com/en-us/dotnet/core/extensions/generic-host?tabs=appbuilder)
 - [BenchmarkDotNet Articles](https://benchmarkdotnet.org/articles/overview.html)
 - [Abp Docs](https://abp.io/docs/9.3/framework/fundamentals/application-startup)
+
+# 🔨 Tools
+- .NET
+- ABP
+- BenchmarkDotNet
