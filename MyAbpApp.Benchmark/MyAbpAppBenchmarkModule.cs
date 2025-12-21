@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Data;
 using Volo.Abp.Autofac;
 using Volo.Abp.Modularity;
@@ -19,7 +20,19 @@ namespace MyAbpApp.Benchmark
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
+            var configuration = context.Services.GetConfiguration();
 
+            // Configure EF Core to use your DB provider
+            Configure<AbpDbContextOptions>(options =>
+            {
+                // options.UseNpgsql();
+            });
+
+            // Configure connection string
+            Configure<AbpDbConnectionOptions>(options =>
+            {
+                options.ConnectionStrings.Default = configuration.GetConnectionString("Default");
+            });
         }
     }
 }
