@@ -1,0 +1,1 @@
+dotnet run --project .\MyAbpApp.Benchmark.csproj -c Release | Tee-Object -FilePath .\.github\copilot-lastbenchmarkresult.md
