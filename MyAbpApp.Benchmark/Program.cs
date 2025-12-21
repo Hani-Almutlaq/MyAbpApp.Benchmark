@@ -1,4 +1,6 @@
-﻿using MyAbpApp.Benchmark.Config;
+﻿using BenchmarkDotNet.Running;
+using MyAbpApp.Benchmark.Config;
+using MyAbpApp.Benchmark.EntityFrameworkCore.DemoBenchmark;
 
 namespace MyAbpApp.Benchmark
 {
@@ -11,7 +13,7 @@ namespace MyAbpApp.Benchmark
             await host.StartAsync();
 
             // Run benchmarks
-            // e.g., BenchmarkRunner.Run<YourBenchmarkClass>();
+            BenchmarkRunner.Run<DemoRepositoryBenchmark>();
 
             // Stop the host
             await host.StopAsync();
