@@ -38,6 +38,7 @@ namespace MyAbpApp.Benchmark.EntityFrameworkCore.DemoBenchmark
 
             // _repo1.FindByName("Uzair");
             // await _repo1.FindByNameAsync("Adeeb");
+            // _repo1.FindByName("Saad");
         }
 
         [GlobalCleanup]

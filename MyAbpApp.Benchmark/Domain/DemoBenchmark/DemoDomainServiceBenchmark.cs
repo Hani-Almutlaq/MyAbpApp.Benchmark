@@ -22,7 +22,7 @@ namespace MyAbpApp.Benchmark.Domain.DemoBenchmark
         }
 
         [Benchmark]
-        public async Task FindByName()
+        public void SomeMethod()
         {
 
         }
