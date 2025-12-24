@@ -25,7 +25,7 @@ namespace MyAbpApp.Benchmark
             // Configure EF Core to use your DB provider
             Configure<AbpDbContextOptions>(options =>
             {
-                // options.UseNpgsql();
+                // options.UseNpgsql(); or options.UseSqlServer();
             });
 
             // Configure connection string
